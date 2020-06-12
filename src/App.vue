@@ -1,9 +1,10 @@
 <template>
   <div id="app">
   <Header/> 
-  <div>
-    Hello world
+  <div class="container">
+ <router-view></router-view>
   </div>
+ 
   </div>
 </template>
 
