@@ -1,21 +1,28 @@
 <template>
-  <div id="app">
+  <div id="app" class="antialiased text-gray-900 flex flex-col min-h-screen">
   <Header/> 
-  <div class="container">
- <router-view></router-view>
-  </div>
- 
+ <router-view class="flex-1"></router-view>
   </div>
 </template>
-
 <script>
+
 import Header from './components/Header.vue'
+import './assets/css/tailwind.css'
 
 export default {
   name: 'App',
-  components: {
-    Header
+  data(){
+    return{
+       open: false,
+       } 
+  },
+  methods: {
+  
+  },
+ components: {
+   Header
   }
 }
 </script>
+
 
