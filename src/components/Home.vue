@@ -1,7 +1,7 @@
 <template>
     <div >
   
-                <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6">
         <div class="bg-blue-100 mt-6 rounded-xl py-6 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-12 flex items-center relative">
             <div class="sm:w-1/2">
                 <h1 class="text-center sm:text-left text-2xl sm:text-3xl text-secondary mb-2 leading-snug"><strong class="underline">This website homepage content</strong><a href="https://tailwindcss.com" target="_blank" class="font-bold"></a></h1>
