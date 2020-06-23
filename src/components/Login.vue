@@ -1,5 +1,5 @@
 <template>
-<body
+<div
   class="h-screen font-sans login bg-cover"
   :style="{backgroundImage:'url(https://www.gstatic.com/webp/gallery/3.jpg)'}"
 >
@@ -13,7 +13,7 @@
           >
             <p class="text-gray-800 font-medium text-center text-lg font-bold">Login</p>
             <TextInput rules="required" v-model="username" label="User Name" />
-            <TextInput rules="required" v-model="password" label="Password" />
+            <TextInput type="password" rules="required" v-model="password" label="Password" />
             <div class="mt-4 items-center justify-between">
               <button
                 class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
@@ -33,7 +33,7 @@
       </div>
     </div>
   </div>
-</body>
+</div>
 </template>
 <script>
 import {  mapActions } from "vuex";

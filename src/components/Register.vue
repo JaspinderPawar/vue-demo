@@ -1,5 +1,5 @@
 <template>
-<body class="h-screen font-sans login bg-cover" :style="{backgroundImage:'url(https://www.gstatic.com/webp/gallery/3.jpg)'}">
+<div class="h-screen font-sans login bg-cover" :style="{backgroundImage:'url(https://www.gstatic.com/webp/gallery/3.jpg)'}">
     <div class="container mx-auto h-full flex flex-1 justify-center items-center" >
     <div class="w-full max-w-lg">
         <div class="leading-loose">
@@ -23,7 +23,7 @@
   </div>
    </div>
     </div>
-</body>
+</div>
 </template>
 
 <script>
