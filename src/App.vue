@@ -2,10 +2,10 @@
   <div id="app" class="antialiased text-gray-900 flex flex-col min-h-screen">
     <Header v-if="status.loggedIn" />
 
-    <div class="container mx-auto h-full flex flex-1 justify-center items-center">
+    <div  v-if="alert.message" class="container mx-auto h-full flex flex-1 justify-center items-center">
       <div
-        v-if="alert.message"
-        class="alert-banner bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative w-full max-w-lg"
+        
+        class="alert-banner  px-4 py-3 rounded relative w-full max-w-lg"
         role="alert"
         :class="`alert ${alert.type}`"
       >
@@ -61,6 +61,17 @@ export default {
 };
 </script>
 <style scoped>
+.alert-success{
+   color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-danger{
+   color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
 /*Banner open/load animation*/
 .alert-banner {
   -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
