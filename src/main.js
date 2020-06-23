@@ -1,19 +1,31 @@
 import Vue from 'vue'
+import { ValidationObserver, ValidationProvider, extend } from 'vee-validate';
+import * as rules from 'vee-validate/dist/rules';
+
 import App from './App.vue'
-import VueRouter from 'vue-router'
+import {router} from './router'
+import { store } from './store';
 
-import routes from './routes'
 
-Vue.use(VueRouter)
+// install rules 
+Object.keys(rules).forEach(rule => {
+  extend(rule, rules[rule]);
+});
+
+// Install components globally
+Vue.component('ValidationObserver', ValidationObserver);
+Vue.component('ValidationProvider', ValidationProvider);
+
+
+// setup fake backend
+import { configureFakeBackend } from './helpers';
+configureFakeBackend();
+
 Vue.config.productionTip = false
-
-const router = new VueRouter({
-  mode: 'history',
-  routes: routes
-})
 
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
 })
