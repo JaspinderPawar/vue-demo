@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 
 import { alert } from './alert';
 import { account } from './account';
-//import { users } from './users.module';
+import { users } from './users';
 
 Vue.use(Vuex);
 
@@ -11,6 +11,6 @@ export const store = new Vuex.Store({
     modules: {
         alert,
         account,
-       // users
+        users
     }
 });
