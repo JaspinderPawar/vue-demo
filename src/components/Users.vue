@@ -3,9 +3,9 @@
     <table
       class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"
     >
-      <thead class="text-white">
+      <thead class="text-gray-700">
         <tr
-          class="bg-teal-400 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0"
+          class=" text-sm flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0"
         >
           <th class="p-3 text-left">First Name</th>
           <th class="p-3 text-left">Last Name</th>
@@ -13,7 +13,7 @@
           <th class="p-3 text-left" width="110px">Actions</th>
         </tr>
       </thead>
-      <tbody class="flex-1 sm:flex-none">
+      <tbody class="text-sm flex-1 sm:flex-none">
         <tr
           v-for="user in users.items"
           :key="user.id"
@@ -21,7 +21,7 @@
         >
           <td class="border-grey-light border hover:bg-gray-100 p-3">{{user.firstName }}</td>
           <td class="border-grey-light border hover:bg-gray-100 p-3">{{user.lastName }}</td>
-          <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{user.username }}</td>
+          <td class="border-grey-light border hover:bg-gray-100 p-3">{{user.username }}</td>
           <td 
             class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer"
           ><a @click="deleteUser(user.id)" class="text-danger">Delete</a></td>
