@@ -1,7 +1,7 @@
 <template>
-  <div class="px-3 py-4 flex justify-center">
+  <div class="container mx-auto px-6">
     <table
-      class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"
+      class="w-full flex flex-row flex-no-wrap sm:bg-white  overflow-hidden sm:shadow-lg"
     >
       <thead class="text-gray-700">
         <tr
@@ -24,7 +24,7 @@
           <td class="border-grey-light border hover:bg-gray-100 p-3">{{user.username }}</td>
           <td 
             class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer"
-          ><a @click="deleteUser(user.id)" class="text-danger">Delete</a></td>
+          ><a @click="deleteUser(user.id)" >Delete</a></td>
         </tr>
       </tbody>
     </table>
