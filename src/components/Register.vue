@@ -52,12 +52,9 @@ export default {
     },
     methods: {
         ...mapActions('account', ['register']),
-        handleSubmit(e) {
-            console.log(e)
+        handleSubmit() {
             this.submitted = true;
-           
-                    this.register(this.user);
-
+            this.register(this.user);
         }
     }
 };

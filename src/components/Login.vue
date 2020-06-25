@@ -14,6 +14,7 @@
             <p class="text-gray-800 font-medium text-center text-lg font-bold">Login</p>
             <TextInput rules="required" v-model="username" label="User Name" />
             <TextInput type="password" rules="required" v-model="password" label="Password" />
+            <span  v-if="alert.message" class="text-sm" :class="alert.type" >{{alert.message}}</span>
             <div class="mt-4 items-center justify-between">
               <button
                 class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
@@ -36,9 +37,8 @@
 </div>
 </template>
 <script>
-import {  mapActions } from "vuex";
+import {  mapActions, mapState } from "vuex";
 import TextInput from "./TextInput";
-
 export default {
   components: {
     TextInput
@@ -49,13 +49,28 @@ export default {
       password: ""
     };
   },
-  computed: {},
+   computed: {
+    ...mapState({
+      alert: state => state.alert,
+    }),
+     ...mapState("account", ["status"])
+  },
+ 
+  watch: {
+    $route() {
+      // clear alert on location change
+      this.clearAlert();
+    }
+  },
   mounted() {},
   created() {
     // reset login status
     this.logout();
   },
   methods: {
+     ...mapActions({
+      clearAlert: "alert/clear"
+    }),
     ...mapActions("account", ["login", "logout"]),
     handleSubmit() {
       const { username, password } = this;
