@@ -3,3 +3,10 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.alert-success{
+    color: #38b2ac;
+ }
+ .alert-danger{
+    color: #e53e3e;
+ }
