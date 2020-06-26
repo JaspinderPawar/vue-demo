@@ -25,9 +25,6 @@ export default {
 </script>
 <style scoped>
 .dashboardStyle{
-background: #F3F4F5;
+padding-top: 10px;
 }
-
 </style>
-
-
