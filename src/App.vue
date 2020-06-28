@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="antialiased text-gray-900 flex flex-col min-h-screen">
+  <div id="app" >
     <Header v-if="status.loggedIn" />  
-    <div class="dashboardStyle">
+    <div >
        <router-view class="flex-1"></router-view>
       </div> 
    
@@ -23,8 +23,3 @@ export default {
   }, 
 };
 </script>
-<style scoped>
-.dashboardStyle{
-padding-top: 10px;
-}
-</style>
